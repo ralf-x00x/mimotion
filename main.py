@@ -300,19 +300,6 @@ def push(title, content):
         print(res)
 
   
-# pushplus
-def pushplus(info, specific, pushplus_token):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
-        'Content-Type': 'application/json'
-    }
-    body = {
-        "token": pushplus_token,
-        "content": specific,
-        "title": info,  # 消息标题
-        "template": "markdown",  # 模板类型
-    }
-    res = requests.post("http://www.pushplus.plus/send", headers=headers, data=json.dumps(body))      
         
 
 # 推送pushplus
@@ -328,7 +315,7 @@ def push_wx(desp=""):
         body = {
         "token": sckey,
         "content": desp,
-        "title": 【小米运动步数修改】,  # 消息标题
+        "title": "【小米运动步数修改】",  # 消息标题
         "template": "markdown",  # 模板类型
         }
         res = requests.post("http://www.pushplus.plus/send", headers=headers, data=json.dumps(body))    
