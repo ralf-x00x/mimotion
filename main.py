@@ -3,7 +3,7 @@ import requests, time, datetime, re,sys, json, random
 
 # 设置开始
 # 用户名（格式为 13800138000）
-print(sys.argv)
+# print(sys.argv)
 # 酷推skey和server酱sckey和企业微信设置，只用填一个其它留空即可
 skey = sys.argv[3]
 # 推送server酱
@@ -27,8 +27,8 @@ step1 = ""
 # 开启根据地区天气情况降低步数（默认关闭）
 open_get_weather = sys.argv[12]
 # 设置获取天气的地区（上面开启后必填）如：area = "宁波"
-area = sys.argv[13]
-
+# area = sys.argv[13] # 传参个数超出
+area = "南宁"
 # 以下如果看不懂直接默认就行只需改上面
 
 # 系数K查询到天气后降低步数比率，如查询得到设置地区为多云天气就会在随机后的步数乘0.9作为最终修改提交的步数
