@@ -299,21 +299,39 @@ def push(title, content):
         # 输出发送结果
         print(res)
 
+  
+# pushplus
+def pushplus(info, specific, pushplus_token):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+        'Content-Type': 'application/json'
+    }
+    body = {
+        "token": pushplus_token,
+        "content": specific,
+        "title": info,  # 消息标题
+        "template": "markdown",  # 模板类型
+    }
+    res = requests.post("http://www.pushplus.plus/send", headers=headers, data=json.dumps(body))      
+        
 
-# 推送server
+# 推送pushplus
 def push_wx(desp=""):
     if sckey == 'NO':
         print(sckey == "NO")
         return
     else:
-        server_url = f"https://sc.ftqq.com/{sckey}.send"
-        params = {
-            "text": '【小米运动步数修改】',
-            "desp": desp
+        headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+        'Content-Type': 'application/json'
         }
-
-        response = requests.get(server_url, params=params).text
-        print(response)
+        body = {
+        "token": sckey,
+        "content": desp,
+        "title": 【小米运动步数修改】,  # 消息标题
+        "template": "markdown",  # 模板类型
+        }
+        res = requests.post("http://www.pushplus.plus/send", headers=headers, data=json.dumps(body))    
 
 
 # 企业微信
