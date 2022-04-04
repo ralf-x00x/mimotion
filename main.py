@@ -44,9 +44,9 @@ time_list = [8, 10, 13, 15, 17, 19, 21]
 set_push = [True, True, True, True, True, True, True]
 
 # 最小步数（如果只需要刷步的次数少于7次就将该次数以后的步数全都改成0，如：time_list[3]: 0，表示第五次开始不运行或者直接云函数触发里面不在该时间调用均可（建议用后者））
-min_dict = {time_list[0]: 6000, time_list[1]: 10000, time_list[2]: 20000, time_list[3]: 30000, time_list[4]: 40000, time_list[5]: 50000, time_list[6]: 60000}
+min_dict = {time_list[0]: 4600, time_list[1]: 8888, time_list[2]: 10000, time_list[3]: 12001, time_list[4]: 14006, time_list[5]: 16000, time_list[6]: 18999}
 # 最大步数（例如现在设置意思是在8点（你设置的第一个时间点默认8）运行会在1500到2999中随机生成一个数提交（开启气候降低步数会乘系数K）10点3000~4999。。。以此类推，步数范围建议看懂了再改，没看懂直接默认就好）
-max_dict = {time_list[0]: 9999, time_list[1]: 19999, time_list[2]: 29999, time_list[3]: 39999, time_list[4]: 49999, time_list[5]: 59999, time_list[6]: 69999}
+max_dict = {time_list[0]: 6666, time_list[1]: 9999, time_list[2]: 12000, time_list[3]: 13999, time_list[4]: 15666, time_list[5]: 18888, time_list[6]: 19999}
 # 设置结束
 #now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 # 北京时间
@@ -161,7 +161,7 @@ def getBeijinTime():
             if a:
                push('【小米运动步数修改】', msg_mi)
                push_wx(msg_mi)
-               run(msg_mi)
+#                run(msg_mi)  # 关闭企业微信推送
             else:
                print("此次修改结果不推送")
     else:
