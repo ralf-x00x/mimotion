@@ -22,7 +22,7 @@
 | PWD |   小米运动登录密码,仅支持小米运动账号对应的密码|
 | SKEY |   酷推skey，如无填写**NO**|
 | SCKEY |   server酱sckey，如无填写**NO**|
-| POSITION |   是否开启企业微信推送**false**关闭,**true**开启|
+| POSITION |   是否开启企业微信推送**NO**关闭,**YES**开启|
 | CORPID |   企业ID， 登陆企业微信，在我的企业-->企业信息里查看,必填，如果没有，填写**NO**|
 | CORPSECRET |   企业微信自建自建应用，每个自建应用里都有单独的secret,必填，如果没有，填写**NO**|
 | AGENTID |   填写你的企业微信自建应用ID，不加引号，是个整型常数,就是AgentId，如果没有，填写**NO**|
